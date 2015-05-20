@@ -1,0 +1,142 @@
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            <?php echo $this->translate('Translations', 'csntranslation'); ?> <small><?php echo $this->translate('Search', 'csntranslation'); ?></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="<?php echo $this->url('admin-dashboard', array('action' => 'index')); ?>"><i class="fa fa-info"></i> <?php echo $this->translate('Dashboard', 'csntranslation'); ?></a>
+            </li>
+            <li>
+                <a href="<?php echo $this->url('admin-translation', array('action' => 'index')); ?>"><i class="fa fa-language"></i> <?php echo $this->translate('Translations', 'csntranslation'); ?></a>
+            </li>
+            <li>
+                <i class="fa fa-search"></i> <?php echo $this->translate('Search', 'csntranslation'); ?>
+            </li>
+        </ol>
+    </div>
+</div>
+<?php 
+    if(count($this->translations)) {
+        // 'position' - (Bootsrap only) 'left' or 'right'. For center should not be used.
+        echo $this->paginationControl($this->translations, 'Sliding', 'CsnTranslation_paginator', 
+                array('route' => 'translation-search-paginator', /*'position' => 'right',*/)); 
+    }
+?>
+<form method="post" action="" role="form">
+<div class="row">
+    <div class="col-xs-7 col-xs-offset-1 col-md-5 col-md-offset-2">
+        <input type="text" name="filter" class="form-control" placeholder="<?php echo $this->translate('Search in whole table', 'csntranslation'); ?>">
+    </div>
+    <div class="col-xs-3 col-md-3">
+        <button type="submit" class="btn btn-default btn-block"><?php echo $this->translate('Filter', 'csntranslation'); ?></button>
+    </div>
+</div>
+</form>
+<div class="gap gap-small"></div>
+<?php if(!count($translations)): ?>
+<h2 class="text-center">
+    <?php echo $this->translate('No records found', 'csntranslation'); ?>
+</h2>
+<?php else: ?>
+<div id="no-more-tables">
+    <table class="col-md-12 table-striped table-condensed table-hover">
+        <thead class="cf">
+            <tr>
+                <th><?php echo $this->translate('Language', 'csntranslation'); ?></th>
+                <th><?php echo $this->translate('Original text', 'csntranslation'); ?></th>
+                <th><?php echo $this->translate('Translation', 'csntranslation'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+    <?php foreach ($translations as $translation) : ?>
+         <tr>
+            <td data-title="<?php echo $this->translate('Language', 'csntranslation'); ?>" style="display: inline-block;">
+                <?php 
+                    $locale = $translation->getLocale()->getLocale();
+                    $lang = substr($locale, 0, 2);
+                    if($lang === "en") $lang = "uk";
+                ?>
+                <span class="buttons-right">
+                <div class="col-xs-12 text-center">
+                    <img src="<?php echo $this->basePath('img/flags/32/'.$lang.'.png'); ?>" style="border: 1px solid #ED8323; border-radius: 50%;"/>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <?php echo $translation->getLocale()->getName(); ?>
+                </div>
+                </span>
+            </td>
+            <?php 
+            $token = $translation->getToken();
+            $translation2 = $translation->getTranslation();
+            $length = 500; 
+            if(strlen($token) > $length) {
+                $token = substr($token, 0, $length).'...';
+            }
+            if(strlen($translation2) > $length) {
+                $translation2 = substr($translation2, 0, $length).'...';
+            }
+            ?>
+            <td data-title="<?php echo $this->translate('Original text', 'csntranslation'); ?>"><?php echo $token; ?></td>
+            <td data-title="<?php echo $this->translate('Translation', 'csntranslation'); ?>"><?php echo $translation2; ?></td>
+        
+            <td data-title="">
+                <span class="buttons-right">
+                    <a class="btn btn-success" href="<?php echo $this->url('admin-translation', array('controller' => 'translation', 'action'=>'edit', 'id' => $translation->getId()));?>" >
+                        <?php echo $this->translate('Edit', 'csntranslation'); ?>
+                    </a>
+                    <a class="confirm-delete btn btn-danger" id="<?php echo $translation->getId(); ?>" href="<?php echo $this->url('admin-translation', array('controller' => 'translation', 'action'=>'delete', 'id' => $translation->getId())); ?>" >
+                        <?php echo $this->translate('Delete', 'csntranslation'); ?>
+                    </a>
+                </span>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php endif; ?>
+<div class="gap gap-small"></div>
+<?php 
+    if(count($this->translations)) {
+        // 'position' - (Bootsrap only) 'left' or 'right'. For center should not be used.
+        echo $this->paginationControl($this->translations, 'Sliding', 'CsnTranslation_paginator', 
+                array('route' => 'translation-search-paginator', /*'position' => 'right',*/)); 
+    }
+?>
+<div class="gap gap-mini"></div>
+
+<div class="modal fade" id="smallModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+            <span class="sr-only">
+                <?php echo $this->translate('Close', 'csntranslation'); ?>
+            </span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel"><?php echo $this->translate('Delete', 'csntranslation'); ?></h4>
+      </div>
+      <div class="modal-body">
+        <div class="text-center"><?php echo $this->translate('Are you sure?', 'csntranslation'); ?></div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-danger btn-block" id="my-modal-confirm-delete" href=""><?php echo $this->translate('Yes', 'csntranslation'); ?></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$('.confirm-delete').click(function(e){
+    e.preventDefault();
+    var id = $(this).attr('id');
+    $('#my-modal-confirm-delete').attr('href', '<?php echo $this->url('admin-translation', array('controller' => 'translation', 'action'=>'delete')); ?>'+'/'+id);
+    $('#smallModal').modal({
+        //keyboard: false,
+        //backdrop: 'static'
+    });
+});
+</script>

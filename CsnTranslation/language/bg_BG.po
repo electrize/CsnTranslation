@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bg_csntranslation\n"
+"POT-Creation-Date: 2015-01-31 08:07+0200\n"
+"PO-Revision-Date: 2015-01-31 08:10+0200\n"
+"Last-Translator: Nikola <x.otic.n@gmail.com>\n"
+"Language-Team: \n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-SearchPath-0: /Users/nikov/Sites/hotelrome/module/CsnTranslation\n"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/src/CsnTranslation/Controller/TranslationController.php:130
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/src/CsnTranslation/Controller/TranslationController.php:177
+#, php-format
+msgid "Translation for %s already exist"
+msgstr "Превод за %s вече съществува"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/src/CsnTranslation/Entity/Translation.php:92
+msgid "Language:"
+msgstr "Език:"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/src/CsnTranslation/Entity/Translation.php:93
+msgid "Original text:"
+msgstr "Оригинален текст:"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/src/CsnTranslation/Entity/Translation.php:94
+msgid "Translation:"
+msgstr "Превод:"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/partial/paginator.phtml:18
+msgid "First"
+msgstr "Първа"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/partial/paginator.phtml:38
+msgid "Previous"
+msgstr "Предишна"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/partial/paginator.phtml:78
+msgid "Next"
+msgstr "Следваща"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/partial/paginator.phtml:95
+msgid "Last"
+msgstr "Последна"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/add.phtml:55
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/add.phtml:63
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/add.phtml:73
+msgid "Add"
+msgstr "Добавяне"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/add.phtml:63
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/add.phtml:70
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/edit.phtml:30
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/edit.phtml:37
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:5
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:12
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:5
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:12
+msgid "Translations"
+msgstr "Преводи"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/add.phtml:67
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/edit.phtml:34
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:9
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:9
+msgid "Dashboard"
+msgstr "Начало"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/edit.phtml:30
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/edit.phtml:40
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/edit.phtml:75
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:92
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:87
+msgid "Edit"
+msgstr "Промяна"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:5
+msgid "Overview"
+msgstr "Преглед"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:20
+msgid "Add new translation"
+msgstr "Добави нов превод"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:35
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:30
+msgid "Search in whole table"
+msgstr "Търсене в цялата таблица"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:38
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:5
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:15
+msgid "Search"
+msgstr "Търсене"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:45
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:40
+msgid "No records found"
+msgstr "Не са намерени записи"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:52
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:60
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:47
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:55
+msgid "Language"
+msgstr "Език"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:53
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:86
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:48
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:81
+msgid "Original text"
+msgstr "Оригинален текст"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:54
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:87
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:49
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:82
+msgid "Translation"
+msgstr "Превод"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:95
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:125
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:90
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:120
+msgid "Delete"
+msgstr "Изтрий"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:122
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:117
+msgid "Close"
+msgstr "Затвори"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:128
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:123
+msgid "Are you sure?"
+msgstr "Сигурни ли сте?"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/index.phtml:131
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:126
+msgid "Yes"
+msgstr "Да"
+
+#: /Users/nikov/Sites/hotelrome/module/CsnTranslation/view/csn-translation/translation/search.phtml:33
+msgid "Filter"
+msgstr "Филтър"
+
+#~ msgid "Translation for \"%s\" already exist"
+#~ msgstr "Превод за \"%s\" вече съществува"

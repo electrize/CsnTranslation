@@ -1,0 +1,110 @@
+<div class="row">
+	<?php if ($this->pageCount > 1): ?>
+	<div class="col-xs-12">
+
+		<!-- position paginator -->
+		<?php if (isset($this->position) && ($this->position === "left" || $this->position === "right")):  ?>
+		<div class="pull-<?php echo $this->position; ?>">
+		<?php else: ?>
+		<div class="text-center">
+		<?php endif; ?>
+		<!-- position paginator - end -->
+
+			<ul class="pagination">
+				<!-- First page link -->
+				<?php if (isset($this->first) && $this->current != $this->first): ?>
+				<li>
+					<a href="<?php echo $this->url($this->route, array('page' => $this->first), false, true); ?>">
+						<?php echo $this->translate('First', 'csntranslation'); ?>
+
+						<!-- Bootstrap only -->
+						<!--span aria-hidden="true">&laquo;</span>
+						<span class="sr-only">
+						<?php //echo $this->translate('First', 'csntranslation'); ?>
+						</span-->
+						<!-- Bootstrap only - end -->
+					</a>
+				</li>
+				<?php endif; ?>
+				<!-- Previous page link -->
+				<?php if (isset($this->previous)): ?>
+				<li>
+					<a href="<?php echo $this->url($this->route, array('page' => $this->previous), false, true); ?>">
+						<?php //echo $this->translate('Prev', 'csntranslation'); ?>
+
+						<!-- Bootstrap only -->
+						<span aria-hidden="true">&lsaquo;</span>
+						<span class="sr-only">
+						<?php echo $this->translate('Previous', 'csntranslation'); ?>
+						</span>
+						<!-- Bootstrap only - end -->
+					</a>
+				</li>
+				<?php else: ?>
+				<li class="disabled">
+					<!-- <a>
+						<
+					</a> -->
+				</li>
+				<?php endif; ?>
+
+				<!-- Numbered page links -->
+
+				<?php foreach ($this->pagesInRange as $page): ?>
+						<?php if ($page != $this->current): ?>
+						<li>
+							<a href="<?php echo $this->url($this->route, array('page' => $page), false, true); ?>">
+								<?php echo $page; ?>
+							</a>
+						</li>
+						<?php else: ?>
+						<li class="active">
+							<a>
+								<?php echo $page; ?>
+							</a>
+						</li>
+						<?php endif; ?>
+				<?php endforeach; ?>
+
+				<!-- Next page link -->
+				<?php if (isset($this->next)): ?>
+				<li>
+					<a href="<?php echo $this->url($this->route, array('page' => $this->next), false, true); ?>">
+						<?php //echo $this->translate('Next', 'csntranslation'); ?>
+
+						<!-- Bootstrap only -->
+						<span aria-hidden="true">&rsaquo;</span>
+						<span class="sr-only">
+							<?php echo $this->translate('Next', 'csntranslation'); ?>
+						</span>
+						<!-- Bootstrap only - end -->
+					</a>
+				</li>
+				<?php else: ?>
+				<li class="disabled">
+					<!-- <a>
+						>
+					</a> -->
+				</li>
+				<?php endif; ?>
+
+				<!-- Last page link -->
+				<?php if (isset($this->last) && $this->current != $this->last): ?>
+				<li>
+					<a href="<?php echo $this->url($this->route, array('page' => $this->last), false, true); ?>">
+						<?php echo $this->translate('Last', 'csntranslation'); ?>
+
+						<!-- Bootstrap only -->
+						<!--span aria-hidden="true">&raquo;</span>
+						<span class="sr-only">
+						<?php //echo $this->translate('Last', 'csntranslation'); ?>
+						</span-->
+						<!-- Bootstrap only - end -->
+					</a>
+				</li>
+				<?php endif; ?>
+			</ul>
+		</div>
+	</div>
+	<?php endif; ?>
+</div>
